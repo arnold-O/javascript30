@@ -1,0 +1,34 @@
+
+
+.keys{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+.key{
+    text-align: center;
+    color: #fff;
+    border: 4px solid #201d1d;
+    border-radius:6px;
+    text-shadow: 0 0 5px black;
+    font-size:1.4rem;
+    padding:1rem 0.5rem;
+    margin:.8rem;
+    background: rgba(red, green, blue, 0.4);
+    transition: 0.06s;
+}
+.sound{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+kbd{
+    display: block;
+    font-size: 40px;
+}
