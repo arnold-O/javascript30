@@ -1,6 +1,6 @@
 body {
     
-    background: url('../images/bakG.avif') bottom center;
+    background: url('./images/bakG.avif') bottom center;
     background-size: cover;
   }
   
