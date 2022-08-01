@@ -1,8 +1,13 @@
-
+body {
+    font-size: 10px;
+    background: url('../images/bakG.avif') bottom center;
+    background-size: cover;
+  }
+  
 
 .keys{
     height: 100vh;
-    background-color: black;
+    /* background-color: black;xsss */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +24,7 @@
     font-size:1.4rem;
     padding:1rem 0.5rem;
     margin:.8rem;
-    background: rgba(red, green, blue, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     transition: 0.06s;
 }
 .sound{
