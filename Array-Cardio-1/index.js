@@ -82,33 +82,80 @@ const oldeYoungest = inventors.sort((a, b) => {
   }
 });
 
-console.log(oldeYoungest);
+console.table(oldeYoungest);
 
-// .4 How many years did all the inventors lived
+// .4a How many years did all the inventors lived
 
-const yearsLived = inventors
-  .map((item) => {
-    const eachAge = item.passed - item.year;
-    return eachAge;
-  })
-  .reduce((total, accum) => {
-    total += accum;
+// const yearsLived = inventors
+//   .map((item) => {
+//     const eachAge = item.passed - item.year;
+//     return eachAge;
+//   })
+//   .reduce((total, accum) => {
+//     total += accum;
 
-    return total;
-  }, 0);
+//     return total;
+//   }, 0);
+
+// console.log(yearsLived);
+
+// .4b  How many years did all the inventors lived
+
+const yearsLived = inventors.reduce((total, accum) => {
+  return total + (accum.passed - accum.year);
+}, 0);
 
 console.log(yearsLived);
 
-const byYearsLived = inventors
-  .map((item) => {
-    const eachAge = item.passed - item.year;
-    return eachAge;
-  })
-  .sort((a, b) => {
-    if (a.byYearsLived > b.byYearsLived) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+// 5a the inventors by years lived
+
+// const byYearsLived = inventors
+//   .map((item) => {
+//     const eachAge = item.passed - item.year;
+//     return eachAge;
+//   })
+//   .sort((a, b) => {
+//     if (a.byYearsLived > b.byYearsLived) {
+//       return 1;
+//     } else {
+//       return -1;
+//     }
+//   });
+
+// 5b the inventors by years lived
+
+const byYearsLived = inventors.sort((a, b) => {
+  if (a.byYearsLived > b.byYearsLived) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
 console.table(byYearsLived);
+
+
+
+// 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+//     const category = document.querySelector('.mw-category')
+
+// const links = Array.from(category.querySelectorAll('a'))
+
+// const de = links.map(link =>link.textContent).filter(item => item.includes('de'))
+
+
+
+// 7.     
+
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick']
+
+
+const counter = data.reduce((item, acc)=>{
+    if(!item[acc]){
+        item[acc] = 0
+    }
+    item[acc]++
+    return item
+},{})
+
