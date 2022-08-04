@@ -1,0 +1,44 @@
+body{
+    background-color: orange;
+}
+.checkbox-wrapper{
+    width:30%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 4rem;
+}
+.Each-chechbox{
+    display: grid;
+    grid-template-columns: 15% 85%;
+ 
+    
+}
+.checkbox-input-wrapper{
+ padding: 1.5rem;
+    border-bottom: 1px solid rgb(245, 234, 234);
+    border-right: 1px solid rgb(245, 234, 234);
+    display: flex;
+    /* gap: 6px; */
+
+}
+input{
+   
+    justify-content: center;
+    align-self: center;
+}
+
+.text-wrapper{
+
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(245, 234, 234);
+    border-bottom: 1px solid rgb(245, 234, 234);
+}
+.text-wrapper p{
+    
+    justify-content: center;
+    align-self: center;
+}
+
+
