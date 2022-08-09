@@ -45,6 +45,19 @@
   console.log(commentId)
 
 
+//   findIndex functionality, to accurately delete something you need to know were it actually id , the index
+
+const indexComment = comments.findIndex((comment)=>comment.id === 2039842)
+
+console.log(indexComment)
+
+// using the index to correctlly delete an item
+comments.splice(indexComment, 1)
+
+console.log(comments)
+
+
+
 
 </script>
 </html>
