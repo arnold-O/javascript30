@@ -146,7 +146,18 @@ console.table(byYearsLived);
 
 
 
-// 7.     
+// 7.     sort the people data alphabetically by last name
+
+
+
+
+
+
+
+
+
+
+
 
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick']
 
