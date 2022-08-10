@@ -1,12 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox-Image-Galery</title>
+    <style>
+        .all-flex-items-wrapper {
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+
+
+        }
+
+        .each-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .each-item > * {
+      margin: 0;
+      width: 100%;
+      transition: transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+        .item-one {
+            background-image: url(https://images.unsplash.com/photo-1659983732529-f60217f771d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+        }
+
+        .item-two {
+            background-image: url(https://images.unsplash.com/photo-1657299156528-2d50a9a6a444?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+        }
+
+        .item-three {
+            background-image: url(https://images.unsplash.com/photo-1659983732529-f60217f771d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+        }
+
+        .item-four {
+            background-image: url(https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60);
+        }
+
+        .item-five {
+            background-image: url(https://images.unsplash.com/photo-1659983732529-f60217f771d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+        }
+
+        .each-item {
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+
+            box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+
+        /* .each-item > *:first-child { transform: translateY(-100%); }
+    .each-item.open-active > *:first-child { transform: translateY(0); }
+    .each-item > *:last-child { transform: translateY(100%); }
+    .each-item.open-active > *:last-child { transform: translateY(0); }
+
+    .each-item p {
+      text-transform: uppercase;
+      font-family: 'Amatic SC', cursive;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 2em;
+    }*/
+    </style> 
 </head>
+
 <body>
-    
-</body> 
+
+    <div class="all-flex-items-wrapper">
+
+        <div class="each-item item-one">
+            <p>let</p>
+            <p>play</p>
+            <p>Soccer</p>
+
+        </div>
+        <div class="each-item item-two">
+            <p>let</p>
+            <p>play</p>
+            <p>Soccer</p>
+
+        </div>
+
+        <div class="each-item item-three">
+            <p>let</p>
+            <p>play</p>
+            <p>Soccer</p>
+
+        </div>
+        <div class="each-item item-four">
+            <p>let</p>
+            <p>play</p>
+            <p>Soccer</p>
+
+        </div>
+        <div class="each-item item-five">
+            <p>let</p>
+            <p>play</p>
+            <p>Soccer</p>
+
+        </div>
+
+    </div>
+
+</body>
+<script>
+    const panels = document.querySelectorAll('.each-item');
+
+    function toggleOpen() {
+        console.log('Hello');
+        this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+        console.log(e.propertyName);
+        if (e.propertyName.includes('flex')) {
+            this.classList.toggle('open-active');
+        }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+</script>
+
 </html>
