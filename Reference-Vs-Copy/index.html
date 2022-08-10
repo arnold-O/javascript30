@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reference-vs-Copy</title>
 </head>
+
 <body>
 
 
-    
+
 </body>
 <script>
-     // start with strings, numbers and booleans
+    // start with strings, numbers and booleans
     // let age = 100;
     // let age2 = age;
     // console.log(age, age2);
@@ -26,13 +28,13 @@
     // console.log(name, name2);
 
     // Let's say we have an array
-    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+    const players = ['chale', 'willy', 'Ryan', 'scott'];
 
     // and we want to make a copy of it.
     const team = players;
 
     console.log(players, team);
-   
+
 
     // So, how do we fix this? We take a copy instead!
     const team2 = players.slice();
@@ -43,7 +45,7 @@
 
     // or use the new ES6 Spread
     const team4 = [...players];
-    team4[3] = 'heeee hawww';
+    team4[3] = 'boss';
     console.log(team4);
 
     const team5 = Array.from(players);
@@ -54,8 +56,8 @@
 
     // with Objects
     const person = {
-      name: 'Wes Bos',
-      age: 80
+        name: 'jolie cole',
+        age: 40
     };
 
     // and think we make a copy:
@@ -63,24 +65,24 @@
     // captain.number = 99;
 
     // how do we take a copy instead?
-    const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+    const cap2 = Object.assign({}, person, { number: 100, age: 33 });
     console.log(cap2);
 
- 
+
 
 
     // objects
 
     const wes = {
-      name: 'Wes',
-      age: 100,
-      social: {
-        twitter: '@wesbos',
-        facebook: 'wesbos.developer'
-      }
+        name: 'Wes',
+        age: 100,
+        social: {
+            twitter: '@wesbos',
+            facebook: 'wesbos.developer'
+        }
     };
 
-    console.clear();
+
     console.log(wes);
 
     const dev = Object.assign({}, wes);

@@ -27,7 +27,7 @@ const people = [
   "Begin, Menachem",
   "Bellow, Saul",
   "Benchley, Robert",
-  "Blair, Robert",
+  "Arnold, boss",
   "Benenson, Peter",
   "Benjamin, Walter",
   "Berlin, Irving",
@@ -147,6 +147,19 @@ console.table(byYearsLived);
 
 
 // 7.     sort the people data alphabetically by last name
+
+
+
+const surname = people.sort((lastone, nextone)=>{
+  const [alast, afirst] = lastone.split(', ')
+  const [blast, bfirst] = nextone.split(', ')
+
+  return alast > blast ? 1 : -1
+})
+
+console.log(surname)
+
+
 
 
 
