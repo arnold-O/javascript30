@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,57 +8,105 @@
     <title>Ajax-Type_Head</title>
 </head>
 <style>
-    body{
+    body {
         background-color: grey;
     }
-    .form-seach-wrapper{
-        
-       width: 300px;
-       margin: 0 auto;
-       margin-top: 40px;
 
-    }
-    .form-seach-wrapper input{
+    .form-seach-wrapper {
+
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 40px;
+        /* background-color: red; */
         
-       width: 200px;
-       height: 40px;
-       padding-left: 15px;
-       outline: none;
-       border: none;
-       box-shadow: 0px 10px 20px  20px rgb(94, 81, 81);
-       border-radius: 12px;
-       font-weight: 600;
-       font-size: 18px;
 
     }
 
-    
-    
-</style>
-<body>
-        <div class="main-wrapper"> 
+    .form-seach-wrapper input {
 
+        width: 100%;
+        height: 40px;
+        padding-left: 15px;
+        outline: none;
+        border: none;
+        box-shadow: 0px 10px 20px 20px rgb(94, 81, 81);
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 18px;
+
+    }
+    .found-city{
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+        background-color: #fff;
        
-   
-        <form  class="form-seach-wrapper">
-            <input type="text" placeholder="Enter City">
+        }
+    .found-city p{
+       color: orange;
+       font-size: 18px;
+       padding: 8px;
+
+        }
+</style>
+
+<body>
+    <div class="main-wrapper">
+
+
+
+        <form class="form-seach-wrapper">
+            <input type="text" placeholder="Enter City" class="value-search">
         </form>
-   
+
+
+        <div class="found-city">
+            <p>Lagos, Nigeria</p>
+        </div>
+
     </div>
 </body>
 <script>
     const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
 
+    const arrayOfData = []
 
-
-    const fetchData = async()=>{
+    const fetchData = async () => {
         const response = await fetch(endpoint)
 
         const data = await response.json()
-        console.log(data)
+
+        arrayOfData.push(...data)
+
     }
 
     fetchData()
-    
+
+
+    const FindCity = (inputvalue, city) => {
+        return city.filter(place => {
+            const regex = new RegExp(inputvalue, 'gi')
+            return place.city.match(regex) || place.state.match(regex)
+        })
+    }
+    const displayMatches = () => {
+        // const matchArray = FindCity(this.value, arrayOfData)
+        // console.log(matchArray)
+        console.log(inputSearch.value)
+    }
+    const cityFound = document.querySelector('.found-city')
+    const inputSearch = document.querySelector('.value-search')
+
+
+
+    inputSearch.addEventListener('change', displayMatches)
+    // inputSearch.addEventListener('keyup', displayMatches)
+
+
+
+
+
 </script>
+
 </html>
