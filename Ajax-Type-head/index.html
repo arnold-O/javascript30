@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-Type_Head</title>
+</head>
+<style>
+    body{
+        background-color: grey;
+    }
+    .form-seach-wrapper{
+        
+       width: 300px;
+       margin: 0 auto;
+       margin-top: 40px;
+
+    }
+    .form-seach-wrapper input{
+        
+       width: 200px;
+       height: 40px;
+       padding-left: 15px;
+       outline: none;
+       border: none;
+       box-shadow: 0px 10px 20px  20px rgb(94, 81, 81);
+       border-radius: 12px;
+       font-weight: 600;
+       font-size: 18px;
+
+    }
+
+    
+    
+</style>
+<body>
+        <div class="main-wrapper"> 
+
+       
+   
+        <form  class="form-seach-wrapper">
+            <input type="text" placeholder="Enter City">
+        </form>
+   
+    </div>
+</body>
+<script>
+    const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+
+
+    const fetchData = async()=>{
+        const response = await fetch(endpoint)
+
+        const data = await response.json()
+        console.log(data)
+    }
+
+    fetchData()
+    
+</script>
+</html>
