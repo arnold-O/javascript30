@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Daily</title>
+    <style>
+      
+        .el-1{
+            background-color:red;
+        }
+        .el-2{
+            background-color:blueviolet;
+        }
+        .el-3{
+            background-color:grey;
+            height: 150px;
+        }
+        .el-4{
+            background-color:pink;
+        }
+        .el-5{
+            background-color:indigo;
+        }
+
+        .parent{
+            display: flex;  
+            background-color: #ddd;
+            font-size: 35px;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .el-1{
+            /* align-self: flex-start; */
+        }
+        .el-5{
+            /* order: -1; */
+        }
+        .el{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+   <section class="parent">
+    <div class="el el-1">learn</div>
+    <div class="el el-2">before</div>
+    <div class="el el-3">you</div>
+    <div class="el el-4">can</div>
+    <div class="el el-5">Earn</div>
+   </section>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
