@@ -10,6 +10,7 @@
 
 //         // for Arrays: splice, slice, filter, reduce, concat, sort, find, map, set.
 //         //For objects:  keys, entries, values,
+
 // //////////******ARRAYS ********/////////
 function strFunction(str) {
   return str.split("").reduce((total, curr) => {
@@ -36,3 +37,14 @@ const palindrome = (params) => {
 console.log(palindrome("preerp"));
 
 // Interger Reversal
+
+const integerReversal = (param)=>{
+
+    const stringNum = param.toString().split('').reverse().join('')
+
+    return parseInt(stringNum) * Math.sign(param)
+
+
+}
+
+console.log( integerReversal(-90))
