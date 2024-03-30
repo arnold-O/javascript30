@@ -97,6 +97,9 @@ const playSong = (id) => {
   else{
     audio.currentTime = userData?.songCurrentTime
   }
+  userData.currentSong = song;
+  playButton.classList.add('playing');
+audio.play();
 
 
 }
