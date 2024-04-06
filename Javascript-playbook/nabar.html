@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav-container{
+            height: 50px;
+            padding: .5rem;
+            /* width: inherit; */
+            box-shadow: 1px 1px 2px gray;
+        }
+        .navbar-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .left-elements ul {
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            gap: 1rem;
+
+        }
+        .item-nav{
+            background-color: rgb(244, 69, 69);
+            padding: 4px 8px;
+            border-radius: 3px;
+            color: #fff;
+        }
+        .item-nav:hover{
+            cursor: pointer;
+            background-color: rgba(143, 8, 8, 0.982);
+            
+        }
+        .arnold-bar{
+            font-size: 22px;
+            font-weight: bold;
+            color: rgba(35, 82, 164, 1);
+        }
+        .left-elements{
+            display: block;
+        }
+        .hamburg{
+            display: none;
+        }
+        
+        
+        @media screen and (max-width: 400px) {
+            .left-elements ul{
+                display: none;
+            }
+            
+            .hamburg{
+                display: block;
+            }
+            
+        }
+        
+        
+        
+        </style>
+</head>
+<body>
+    <div class="nav-container">
+        
+        <div class="navbar-item">
+            <div class="arnold-bar">Arnold Bar</div>
+            
+            <div class="left-elements">
+                <ul>
+                    <li class="item-nav Home">Home</li>
+                    <li class="item-nav login">Login</li>
+                    <li class="item-nav signup">Sign up</li>
+                    <li class="item-nav cart">Cart</li>
+                </ul>
+                <span class="hamburg"><i class='far fa-plus-square' style='font-size:36px'></i></span>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>  
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</body>
+</html>
