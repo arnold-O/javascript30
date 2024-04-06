@@ -51,6 +51,10 @@
         .hamburg{
             display: none;
         }
+        .hide{
+            visibility:hidden;
+        }
+       
         
         
         @media screen and (max-width: 400px) {
@@ -61,6 +65,14 @@
             .hamburg{
                 display: block;
             }
+
+            .harmburger-menu ul li{
+                display: block;
+            padding: 4px 8px;
+            background-color: rgb(208, 207, 207);
+            margin-bottom: 6px;
+
+        }
             
         }
         
@@ -83,10 +95,23 @@
                 </ul>
                 <span class="hamburg"><i class='far fa-plus-square' style='font-size:36px'></i></span>
             </div>
+           
+
         </div>
+      
 
     </div>
+
+    <div class="hide">
+        <ul class="harmburger-menu">
+            <li>Home</li>
+            <li>Login</li>
+            <li>Sign up</li>
+            <li>Cart</li>
+        </ul>
+    </div>
+   
     <script src="index.js"></script>  
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+ 
 </body>
 </html>
