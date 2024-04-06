@@ -11,15 +11,66 @@
         .blue{
             color: blue;
         }
+        .container{
+            width: 600px;
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: rgb(220, 217, 217);
+            text-align: center;
+            padding: 1rem;
+            height: 150px;
+        }
+        .btn-container{
+            margin-top: 2rem;
+        }
+        .counter{
+            font-size: 20px;
+        }
+        .btn-container button{
+            background-color: rgb(86, 234, 17);
+            outline: none;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            color: #fff;
+          
+        }
+        .btn-container button:hover{
+            cursor: pointer;
+            box-shadow: 10px 5px 5px rgb(220, 218, 218)
+        }
+
     </style>
 </head>
 <body>
 
-    <p class="red">Here we go again</p>
+    <!-- <p class="red">Here we go again</p>
     
 <input type="text" id="name">
 <hr>
     <Button class="btn">Click</Button>
+
+
+    <div class="container">
+        <ul class="list-item">
+            <li class="link">List-item</li>
+            <li class="link1">List-item1</li>
+            <li class="link2">List-item2</li>
+            <li class="link3">List-item3</li>
+        </ul>
+    </div> -->
+
+    <div class="container">
+        <h3>Counter</h3>
+
+        <div><span class="counter">0</span></div>
+
+        <div class="btn-container">
+            <button class="btn decrease">decrease</button>
+            <button class="btn reset">reset</button>
+            <button class="btn increase">Increase</button>
+        </div>
+    </div>
 
 
     <script src="index.js"></script>
