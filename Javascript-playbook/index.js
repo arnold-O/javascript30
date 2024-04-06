@@ -84,11 +84,67 @@ counterHtml.textContent = counter;
  * 
 */
 
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const namer = document.querySelector('.review-name');
+const job = document.querySelector('.review-job');
+const text = document.querySelector('.review-text');
+const img = document.querySelector('.img-source');
+ 
+
 
 const  reviewsdata =  [
     {
         id:1,
-        name:"susan peters",
+        name:"Gold Sachs",
+        job:"Content Creator",
         img:"https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.jpg?s=612x612&w=0&k=20&c=tyLvtzutRh22j9GqSGI33Z4HpIwv9vL_MZw_xOE19NQ="
+    },
+    {
+        id:2,
+        name:"susan peters",
+        job:"System Analyst",
+        img:"https://media.istockphoto.com/id/1398385367/photo/happy-millennial-business-woman-in-glasses-posing-with-hands-folded.jpg?s=612x612&w=0&k=20&c=Wd2vTDd6tJ5SeEY-aw0WL0bew8TAkyUGVvNQRj3oJFw="
+    },
+    {
+        id:3,
+        name:"Ken Sarowiwa",
+        job:"Developer",
+        img:"https://media.istockphoto.com/id/1399788030/photo/portrait-of-young-confident-indian-woman-pose-on-background.jpg?s=612x612&w=0&k=20&c=aQw5YhGl99hL1O77thwpQTmqVE7bc8rCX9H0gTeoX_k="
     }
 ]
+let count = 0;
+function utils(count){
+    namer.textContent = reviewsdata[count].name;
+    job.textContent = reviewsdata[count].job;
+    img.setAttribute('src', reviewsdata[count].img ) ;
+}
+prev.addEventListener('click', function(e){
+
+    if(count < 0){
+        count = reviewsdata.length - 1
+        utils(count)
+        console.log(count)
+    }else { 
+        utils(count)
+        console.log(count)
+        
+    }
+   
+   count--
+})
+next.addEventListener('click', function(e){
+
+    if(count >=  reviewsdata.length){
+        count = 0
+      utils(count)
+        console.log(count)
+    }else { 
+       utils(count);
+        console.log(count)
+    }
+    
+    count++
+
+})
+
