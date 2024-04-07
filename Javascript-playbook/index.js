@@ -177,6 +177,7 @@ const toogleHarmburg = document.querySelector('.hamburg');
 const mainContainer = document.querySelector('.nav-container')
 const hamContainer = document.querySelector('.hide')
 const hide = document.querySelector('.hide')
+const homeLink = document.querySelector('.home-link')
 toogleHarmburg.addEventListener('click', function(e){
   const stylecheck = hamContainer.classList.contains('hide')
 
@@ -192,3 +193,4 @@ toogleHarmburg.addEventListener('click', function(e){
    
 }
 })
+

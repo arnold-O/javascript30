@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Navbar</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .nav-container{
+
+        .nav-container {
             height: 50px;
             padding: .5rem;
             /* width: inherit; */
             box-shadow: 1px 1px 2px gray;
         }
-        .navbar-item{
+
+        .navbar-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
+
         .left-elements ul {
             list-style: none;
             text-decoration: none;
@@ -29,63 +33,67 @@
             gap: 1rem;
 
         }
-        .item-nav{
+
+        .item-nav {
             background-color: rgb(244, 69, 69);
             padding: 4px 8px;
             border-radius: 3px;
             color: #fff;
         }
-        .item-nav:hover{
+
+        .item-nav:hover {
             cursor: pointer;
             background-color: rgba(143, 8, 8, 0.982);
-            
+
         }
-        .arnold-bar{
+
+        .arnold-bar {
             font-size: 22px;
             font-weight: bold;
             color: rgba(35, 82, 164, 1);
         }
-        .left-elements{
+
+        .left-elements {
             display: block;
         }
-        .hamburg{
+
+        .hamburg {
             display: none;
         }
-        .hide{
-            visibility:hidden;
+
+        .hide {
+            visibility: hidden;
         }
-       
-        
-        
+
+
+
         @media screen and (max-width: 400px) {
-            .left-elements ul{
+            .left-elements ul {
                 display: none;
             }
-            
-            .hamburg{
+
+            .hamburg {
                 display: block;
             }
 
-            .harmburger-menu li{
+            .harmburger-menu li {
                 display: block;
-            padding: 4px 8px;
-            background-color: rgb(208, 207, 207);
-            margin-bottom: 6px;
+                padding: 4px 8px;
+                background-color: rgb(208, 207, 207);
+                margin-bottom: 6px;
+
+            }
 
         }
-            
-        }
-        
-        
-        
-        </style>
+    </style>
 </head>
+
 <body>
     <div class="nav-container">
-        
+
         <div class="navbar-item">
             <div class="arnold-bar">Arnold Bar</div>
-            
+
             <div class="left-elements">
                 <ul>
                     <li class="item-nav Home">Home</li>
@@ -95,23 +103,24 @@
                 </ul>
                 <span class="hamburg"><i class='far fa-plus-square' style='font-size:36px'></i></span>
             </div>
-           
+
 
         </div>
-      
+
 
     </div>
 
     <div class="hide">
         <ul class="harmburger-menu">
-            <li>Home</li>
+            <li class="home-link">Home</li>
             <li>Login</li>
             <li>Sign up</li>
             <li>Cart</li>
         </ul>
     </div>
-   
-    <script src="index.js"></script>  
- 
+
+    <script src="index.js"></script>
+
 </body>
+
 </html>
